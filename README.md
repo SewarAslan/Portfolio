@@ -26,7 +26,7 @@ A web platform for managing and selling handmade crafts. Built with **Node.js**,
 
 ### 🎪 School Circus – Desktop App for School Activity Management
 
-## A desktop application that helps schools organize and manage extracurricular activities and events. The system includes features for event creation, student participation tracking, and activity scheduling. Developed using **Java**, with a focus on user-friendly UI and offline functionality.
+A desktop application that helps schools organize and manage extracurricular activities and events. The system includes features for event creation, student participation tracking, and activity scheduling. Developed using **Java**, with a focus on user-friendly UI and offline functionality.
 
 ## 🏅 Achievements & Activities
 
