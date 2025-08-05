@@ -243,3 +243,92 @@
     max-width: 280px;
   }
 }
+
+.about-section {
+  background: var(--bg-primary);
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-text {
+  font-size: 1.1rem;
+}
+
+.about-text p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+.about-text p:first-child {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(102, 155, 188, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.skill-item:hover::before {
+  left: 100%;
+}
+
+.skill-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px var(--shadow);
+  border-color: var(--secondary-blue);
+}
+
+.skill-item i {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-red);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover i {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--secondary-blue);
+}
+
+.skill-item span {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
