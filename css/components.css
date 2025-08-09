@@ -17,17 +17,55 @@
   transition: var(--transition);
   z-index: 1000;
 }
+
+.sidebar-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 10001;
+}
+.sidebar.active {
+  transform: translateX(0);
+}
+.sidebar-close:hover {
+  background: rgba(193, 18, 31, 0.1);
+  color: var(--primary-red);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .sidebar-close {
+    display: flex;
+  }
+
+  .sidebar.active .sidebar-close {
+    display: flex;
+  }
+}
 .nav-brand {
   text-align: center;
   padding: var(--spacing-md) 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--lines);
   margin-bottom: var(--spacing-lg);
 }
-.nav-brand h2 {
+.nav-brand h1 {
   font-family: "Bitter", serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: var(--primary-red);
+  color: var(--text-primary);
   margin-bottom: var(--spacing-xs);
 }
 .nav-brand span {
@@ -88,7 +126,7 @@
 .nav-footer {
   margin-top: var(--spacing-xs);
   padding-top: var(--spacing-xs);
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--lines);
 }
 .theme-toggle {
   display: flex;
@@ -98,7 +136,7 @@
   width: 50%;
   padding: var(--spacing-xs);
   background: transparent;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--lines);
   border-radius: var(--radius-md);
   color: var(--text-secondary);
   font-size: 0.8rem;
@@ -196,7 +234,7 @@
 
 .hero-subtitle {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  color: var(--secondary-blue);
+  color: var(--text-secondary);
   margin-bottom: var(--spacing-md);
   font-weight: 600;
 }
@@ -341,7 +379,7 @@
   background: var(--bg-secondary);
   padding: var(--spacing-xl) var(--spacing-md);
 }
-.projects-grid {
+.project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-lg);
@@ -553,7 +591,7 @@
 }
 .form-input:focus {
   outline: none;
-  border-color: var(--secondary-blue);
+  border-color: var(--text-secondary);
   box-shadow: 0 0 0 3px rgba(102, 155, 188, 0.1);
   transform: translateY(-2px);
 }

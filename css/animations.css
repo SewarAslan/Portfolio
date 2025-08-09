@@ -92,10 +92,9 @@ html {
   border-radius: var(--radius-sm);
   box-shadow: 0 4px 15px var(--shadow);
 }
-.mobile-menu-toggle span {
+.mobile-menu-toggle i {
   width: 25px;
-  height: 3px;
-  background: var(--text-primary);
+  color: var(--text-primary);
   margin: 2px 0;
   transition: 0.3s;
   border-radius: 2px;

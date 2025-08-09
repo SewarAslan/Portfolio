@@ -30,6 +30,7 @@ body {
   --text-muted: #6b7280;
   --border-color: #e5e7eb;
   --shadow: rgba(0, 48, 73, 0.1);
+  --lines: var(--primary-blue);
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -51,10 +52,11 @@ body {
   --bg-secondary: #2d1b1b;
   --bg-card: #1a0000;
   --text-primary: var(--white);
-  --text-secondary: var(--accent-cream);
-  --text-muted: var(--secondary-blue);
+  --text-secondary: var(--light-pink);
+  --text-muted: var(--white);
   --border-color: #4a2c2c;
   --shadow: rgba(0, 0, 0, 0.3);
+  --lines: #4a2c2c;
 }
 
 h1,
@@ -116,7 +118,7 @@ p {
 }
 .section-subtitle {
   text-align: center;
-  color: var(--text-muted);
+  color: var(--text-primary);
   font-size: 1.1rem;
   margin-bottom: var(--spacing-lg);
 }
@@ -165,8 +167,8 @@ section[id] {
 
 .btn-secondary {
   background: transparent;
-  color: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
+  color: var(--text-secondary);
+  border: 2px solid var(--text-secondary);
 }
 
 .btn-secondary:hover {
