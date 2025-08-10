@@ -129,8 +129,6 @@ p {
 }
 section {
   padding: var(--spacing-xl) var(--spacing-md);
-  width: 100%;
-  margin: 0;
 }
 
 section[id] {
