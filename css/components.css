@@ -1,8 +1,8 @@
 .sidebar {
-  position: fixed;
+  grid-area: sidebar;
+  position: sticky;
   top: 0;
   left: 0;
-  width: var(--sidebar-width);
   height: 100vh;
   background: linear-gradient(
     180deg,
