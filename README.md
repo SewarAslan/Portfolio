@@ -40,7 +40,7 @@ A desktop application that helps schools organize and manage extracurricular act
 
 ## 📫 Contact Me
 
-- 📧 Email: `sewar.aslan@example.com`
+- 📧 Email: `sewaraslan02@gmail.com`
 - 🔗 LinkedIn: [linkedin.com/in/sewaraslan](https://www.linkedin.com/in/sewaraslan)
 - 💻 GitHub: [github.com/sewaraslan](https://github.com/sewaraslan)
 
