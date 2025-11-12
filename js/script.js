@@ -148,3 +148,103 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTimeout = setTimeout(updateActiveNavOnScroll, 10);
   });
 });
+// ========================================
+// PROJECTS LIST & DYNAMIC RENDERING
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const projects = [
+    {
+      title: "Smart Stays",
+      description: "A hotel booking platform built with React and Node.js.",
+      image: "assets/images/smartstays.png",
+      github: "https://github.com/SewarAslan/HotelBookingApp-FTS",
+      demo: "https://hotel-booking-app-6v310zm7p-sewar-aslans-projects.vercel.app/login",
+      tech: ["React", "TypeScript", "Material-UI", "Node.js"],
+    },
+    {
+      title: "Amana Marketing",
+      description:
+        "A modern marketing website built with React and Material-UI, featuring responsive design, smooth animations, and a clean user experience. Deployed on Vercel.",
+      image: "assets/images/amana-marketing.png",
+      github: "https://github.com/SewarAslan/Amana-Marketing",
+      demo: "https://amana-marketing-ruddy.vercel.app/",
+      tech: ["React", "NextJS", "TypeScript", "Material-UI"],
+    },
+    {
+      title: "Amana Financial",
+      description:
+        "A financial-services web app (beta) showcasing responsive design, clean UI and real-time data visuals, deployed on Vercel.",
+      image: "assets/images/amana-financial.png",
+      github: "https://github.com/SewarAslan/amana-financial",
+      demo: "https://amana-financial-beta.vercel.app/",
+      tech: ["React", "TypeScript", "Responsive UI"],
+    },
+    {
+      title: "Hospital Management System",
+      description:
+        "A full-stack web application for managing hospital operations — including patient records, appointments, and staff dashboards. Built with React (frontend) and Node.js + Express (backend) with PostgreSQL database. Deployed on Vercel.",
+      image: "assets/images/hospital-management.png",
+      github: "https://github.com/SewarAslan/hospital-management-system",
+      demo: "https://hospital-management-system-silk-six.vercel.app",
+      tech: ["React", "tailwindCSS", "Java", "PostgreSQL"],
+    },
+    {
+      title: "Roze'",
+      description:
+        "A mobile e-commerce app for selling flower bouquets, built with Flutter and Node.js, featuring product browsing, order placement, and inventory management.",
+      image: "assets/images/Roze.png",
+      github: "https://github.com/SewarAslan/GraduationProject",
+      demo: "https://github.com/SewarAslan/GraduationProject",
+      tech: ["Flutter", "Node.js", "React", "Python", "MongoDB"],
+    },
+    {
+      title: "The Show",
+      description:
+        "A desktop app for managing school extracurricular activities, featuring event creation, student tracking, and scheduling. Built with Java for a user-friendly, offline experience.",
+      image: "assets/images/theShow.jpg",
+      github:
+        "https://github.com/farahelhasan/Database-Project-The-Show-Circus-School-Application-",
+      demo: "https://github.com/farahelhasan/Database-Project-The-Show-Circus-School-Application-",
+      tech: ["Java", "JavaFX", "Oracle DB"],
+    },
+  ];
+
+  function renderProjects() {
+    const container = document.querySelector(".project-grid");
+    if (!container) return;
+
+    container.innerHTML = projects
+      .map(
+        (p) => `
+        <div class="project-card">
+          <div class="project-image">
+            <img src="${p.image}" alt="${p.title}">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="${p.demo}" class="project-link" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="${p.github}" class="project-link" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">${p.title}</h3>
+            <p class="project-description">${p.description}</p>
+            <div class="project-tech">
+              ${p.tech
+                .map((t) => `<span class="tech-tag">${t}</span>`)
+                .join("")}
+            </div>
+          </div>
+        </div>
+      `
+      )
+      .join("");
+  }
+
+  renderProjects();
+});
