@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "A hotel booking platform built with React and Node.js.",
       image: "assets/images/smartstays.png",
       github: "https://github.com/SewarAslan/HotelBookingApp-FTS",
-      demo: "https://hotel-booking-app-6v310zm7p-sewar-aslans-projects.vercel.app/login",
+      demo: "https://hotel-booking-app-6v310zm7p-sewar-aslans-projects.vercel.app",
       tech: ["React", "TypeScript", "Material-UI", "Node.js"],
     },
     {
